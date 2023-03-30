@@ -5,35 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header>
+    <img class="logo" src="./images/logo.svg">
+    <img class="mobile-menu" src="./images/icon-menu.svg">
+    <nav class="nav-container">
+      <ul class="nav-list nav-left">
+        <li><a class="nav-item">Features</a></li>
+        <li><a class="nav-item">Company</a></li>
+        <li><a class="nav-item">Careers</a></li>
+        <li><a class="nav-item">About</a></li>
+      </ul>
+      <ul class="nav-list nav-right">
+        <li><a class="nav-item">Login</a></li>
+        <li><a class="nav-item">Register</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  Features
-  Company
-  Careers
-  About
+  <main class="main-container">
+    <div class="left-col">
+      <h1 class="hero-title">Make remote work</h1>
+      <p class="hero-body">
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.    
+      </p>
+      <a class="hero-learn-more">Learn more</a>  
+      <div class="sponsors">
+        <div class="sponsor-img-container sponsor-img-databiz">
+          <img class="sponsor-img" src="./images/client-databiz.svg">
+        </div>
+        <div class="sponsor-img-container sponsor-img-audio">
+          <img class="sponsor-img" src="./images/client-audiophile.svg">
+        </div>
+        <div class="sponsor-img-container">
+          <img class="sponsor-img" src="./images/client-meet.svg">
+        </div>
+        <div class="sponsor-img-container">
+          <img class="sponsor-img" src="./images/client-maker.svg">
+        </div>
+      </div>
+    </div>
 
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
+    <div class="right-col">
+      <img class="hero-img img-mobile" src="./images/image-hero-mobile.png">
+      <img class="hero-img img-desktop" src="./images/image-hero-desktop.png">
+    </div>
+  </main>
+   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Jordan Patel</a>.
   </div>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>

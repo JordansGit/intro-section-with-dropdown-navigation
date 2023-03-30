@@ -1,0 +1,172 @@
+.attribution { font-size: 11px; text-align: center; margin-top: 1em;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* General Styles */ 
+
+* {
+  box-sizing: border-box;
+  font-family: 'Epilogue', sans-serif;
+}
+
+body, h1, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+/* ==================
+   Typography
+===================== */
+body {
+  background: var(--almost-white);
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+.hero-title, .hero-learn-more {
+  font-weight: 700;
+}
+
+.nav-item, .hero-body {
+  font-weight: 500;
+  color: var(--medium-gray);
+}
+
+.hero-title {
+  color: var(--almost-black);
+  font-size: 2.2rem;
+}
+
+.hero-learn-more {
+  color: var(--almost-white);
+  background: var(--almost-black);
+  padding: 1em 1.5em;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+/* ==================
+   Layout
+===================== */
+
+/* Header */ 
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 1em;
+}
+
+.nav-container {
+  display: none;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu {
+  margin-top: -5px;
+}
+
+@media (min-width: 600px) {
+  .nav-list {
+    flex-direction: row;
+  }
+
+  .nav-right {
+    margin-left: auto;
+  }
+}
+
+/* Main */ 
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-col {
+  order: 1;
+}
+
+.left-col {
+  order: 2;
+  text-align: center;
+}
+
+.hero-body {
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-img {
+  width: 100vw;
+}
+
+.img-desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .hero-body {
+    width: 435px;
+  }
+  .img-desktop {
+    display: block;
+  }
+  .img-mobile {
+    display: none;
+  }
+}
+
+.hero-title {
+  margin-top: 1.2em;
+}
+.hero-body {
+  margin: 1.3em auto;
+  line-height: 1.5;
+}
+
+.hero-learn-more {
+  margin-bottom: 3em;
+}
+
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.7em;
+  width: 93vw;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsor-img-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 25%;
+}
+.sponsor-img {
+  width: 100%;
+}
+
+.sponsor-img-databiz {
+  flex-basis: 30%;
+}
+.sponsor-img-audio {
+  flex-basis: 20%;
+}
