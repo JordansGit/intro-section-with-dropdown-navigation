@@ -36,9 +36,15 @@ body {
   font-weight: 700;
 }
 
-.nav-item, .hero-body {
+.nav-item, .nav-nested-item, .hero-body {
   font-weight: 500;
   color: var(--medium-gray);
+}
+
+@media (min-width: 830px) {
+  .nav-list {
+    font-size: 0.9rem;
+  }
 }
 
 .hero-title {
@@ -75,16 +81,24 @@ header {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .mobile-menu {
   margin-top: -5px;
 }
 
+.register-btn {
+  padding: 13px 22px 12px;
+  border-radius: 15px;
+  border: 2px solid var(--medium-gray);
+}
+
 @media (min-width: 600px) {
   header {
     padding-bottom: unset;
     max-width: 1400px;
+    width: 97vw;
     margin: 0 auto;
   }
   .nav-list {
@@ -94,7 +108,76 @@ header {
   .nav-right {
     margin-left: auto;
   }
+
 }
+
+.arrow-icon {
+  margin-bottom: 1px;
+  margin-left: 4px;
+}
+
+.nav-nested-list {
+  list-style-type: none;
+}
+
+.nav-nested-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-todo::before {
+  content: url(../images/icon-todo.svg);
+  margin-right: 1em;
+  width: 16px;
+}
+.nav-calender::before {
+  content: url(../images/icon-calendar.svg);
+  margin-right: 1em;
+  width: 16px;
+}
+.nav-reminder::before {
+  content: url(../images/icon-reminders.svg);
+  margin-right: 1em;
+  width: 16px;
+}
+.nav-planning::before {
+  content: url(../images/icon-planning.svg);
+  margin-right: 1em;
+  width: 16px;
+}
+
+@media (min-width: 830px) {
+  .mobile-menu {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 3em;
+  }
+  .nav-list {
+    gap: 3em;
+  }
+
+  .nav-nested-list {
+    background: white;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 5px 5px 20px rgba(0,0,0, 0.1);
+    position: absolute;
+    top: 32px;
+  }
+
+  .nav-features-list {
+    left: -70px;
+  }
+  .nav-nested-item {
+    padding: 0.5em;
+  }
+
+}
+
 
 /* Main */ 
 .main-container {
@@ -124,7 +207,7 @@ header {
     align-content: space-between;
     /* gap: 200px; */ 
     gap: 2em;
-    margin: 4em auto 0 auto;
+    margin: 4.5em auto 0 auto;
     padding: 0 0.5em 0 2em;
     height: max-content;
   }
