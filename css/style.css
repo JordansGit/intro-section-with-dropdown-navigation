@@ -36,7 +36,7 @@ body {
   font-weight: 700;
 }
 
-.nav-item, .nav-nested-item, .hero-body {
+.nav-item a, .nav-nested-item, .hero-body {
   font-weight: 500;
   color: var(--medium-gray);
 }
@@ -57,6 +57,7 @@ body {
   background: var(--almost-black);
   padding: 1em 1.5em;
   border-radius: 15px;
+  border: 1px solid var(--almost-black);
   display: inline-block;
 }
 
@@ -84,6 +85,13 @@ header {
   position: relative;
 }
 
+.nav-item {
+  padding: 0.5em;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 .mobile-menu {
   margin-top: -5px;
 }
@@ -92,6 +100,10 @@ header {
   padding: 13px 22px 12px;
   border-radius: 15px;
   border: 2px solid var(--medium-gray);
+}
+
+.logo {
+  margin-bottom: -6px;
 }
 
 @media (min-width: 600px) {
@@ -147,6 +159,9 @@ header {
 }
 
 @media (min-width: 830px) {
+  header {
+    padding-top: 1em;
+  }
   .mobile-menu {
     display: none;
   }
@@ -157,9 +172,14 @@ header {
     margin-left: 3em;
   }
   .nav-list {
-    gap: 3em;
+    gap: 2.1em;
+    align-items: center;
   }
 
+  .nav-features-list, .nav-company-list {
+    display: none;
+  }
+  
   .nav-nested-list {
     background: white;
     border-radius: 10px;
@@ -334,6 +354,26 @@ header {
   }
 }
 
+/* Active States */ 
+
+.nav-item, .hero-learn-more {
+  cursor: pointer;
+}
+
+.nav-item:hover > a, .nav-item:focus > a {
+  color: var(--almost-black);
+}
+
+
+
+.hero-learn-more:hover, .hero-learn-more:focus {
+  color: var(--almost-black);
+  background: var(--almost-white);
+}
+
+.register-btn:hover, .register-btn:focus {
+  border: 2px solid var(--almost-black);
+}
 /* 
 add nav at min-width: 700px;
 
@@ -341,4 +381,10 @@ To do:
   nav mobile 
   nav menu 
   active states 
+*/ 
+
+/* today i've done 
+js for desktop nav
+active states 
+
 */ 
